@@ -11,6 +11,7 @@
   height: 70px;
 }
 
+/* Header Styles */
 nav {
   position: fixed;
   left: 0;
@@ -27,7 +28,6 @@ nav .navbar {
   justify-content: space-between;
   height: 100%;
   max-width: 90%;
-  background: #034078;
   margin: auto;
 }
 
@@ -54,6 +54,7 @@ nav .navbar .menu {
   text-decoration: none;
 }
 
+/* Section Styles */
 section {
   display: flex;
   height: 100vh;
@@ -70,6 +71,7 @@ section {
   padding-top: 80px;
 }
 
+/* Background Colors for Different Sections */
 #About, #Contact {
   background: #f2f2f2;
 }
@@ -82,6 +84,7 @@ section {
   background: #fff;
 }
 
+/* Button Styles */
 .button a {
   position: fixed;
   bottom: 20px;
