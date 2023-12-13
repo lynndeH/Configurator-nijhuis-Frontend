@@ -43,13 +43,22 @@
     </div>
     </div>
 
+    <!-- the button for the next page -->
+    <div>
+
+    </div>
+
+
+    <!-- start of the javascript -->
     <script>
+        //this functions toggles the clicked class from the selector-box
         function toggleClicked(element) {
             //remove all other classes so only one can be clicked at a time
             var siblings = element.parentNode.getElementsByClassName('selector-box');
             for (var i = 0; i < siblings.length; i++) {
                 siblings[i].classList.remove('clicked');
             }
+            //add the class to the clicked selector box
             element.classList.toggle('clicked');
         }
     </script>
