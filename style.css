@@ -11,9 +11,38 @@
   height: 70px;
 }
 
+.selector-img {
+  width: auto;
+  height: 400px;
+}
+
+.flexbox-selector-img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.selector-box {
+  border: solid black 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.selector-box:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.selector-box.clicked {
+  transform: scale(1.1);
+  border-color: #034078;
+  border: solid 3px;
+}
+
 /* Header Styles */
 nav {
-  position: fixed;
   left: 0;
   top: 0;
   width: 100%;

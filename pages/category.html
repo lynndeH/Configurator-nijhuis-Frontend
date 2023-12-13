@@ -29,13 +29,30 @@
     <!-- the actual configurator is starting here -->
 
     <div>
-        <div>
-            <img src="kitchen.jpg" alt="kitchen">
+        <h1 style="text-align: center; margin-bottom: 30px;">Wat voor een ruimte wilt u verbouwen?</h1>
+        <div class="flexbox-selector-img">
+        
+        <div class="selector-box" onclick="toggleClicked(this)">
+            <img src="../files/bathroom.jpg" alt="bathroom" class="selector-img">
+            <p style="text-align: center;">Badkamer</p>
         </div>
-        <div>
-            <img src="bathroom.jpg" alt="bathroom">
+        <div class="selector-box" onclick="toggleClicked(this)">
+            <img src="../files/kitchen.jpg" alt="kitchen" class="selector-img">
+            <p style="text-align: center;">Keuken</p>
         </div>
     </div>
+    </div>
+
+    <script>
+        function toggleClicked(element) {
+            //remove all other classes so only one can be clicked at a time
+            var siblings = element.parentNode.getElementsByClassName('selector-box');
+            for (var i = 0; i < siblings.length; i++) {
+                siblings[i].classList.remove('clicked');
+            }
+            element.classList.toggle('clicked');
+        }
+    </script>
 </body>
 
 </html>
