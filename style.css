@@ -41,6 +41,21 @@
   border: solid 3px;
 }
 
+.next-button {
+  background-color: #034078;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
 /* Header Styles */
 nav {
   left: 0;
@@ -94,23 +109,12 @@ section {
   font-size: 70px;
 }
 
-.home-section {
+.homepage {
+  background-image: url('files/background.jpg');
   background-size: cover;
-  height: auto;
-  padding-top: 80px;
-}
-
-/* Background Colors for Different Sections */
-#About, #Contact {
-  background: #f2f2f2;
-}
-
-#Category, #Feedback {
-  background: #e6e6e6;
-}
-
-#Latest {
-  background: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Button Styles */
@@ -125,7 +129,38 @@ section {
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
+
 .ConfigStart{
     width: 50px;
     height: 15px;
+
+}
+.flexbox-underbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.underbar-section-side {
+  width: 33.33%;
+  height: 160px;
+  background-color: #fff;
+  bottom: 0px;
+}
+
+.underbar-section-middle {
+  width: 33.33%;
+  height: 200px;
+  background-color: #fff;
+}
+
+.underbar-section-top-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #034078;
+  position: relative;
+  top: 0px;
 }
