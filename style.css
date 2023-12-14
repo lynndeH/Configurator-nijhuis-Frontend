@@ -125,3 +125,7 @@ section {
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
+.ConfigStart{
+    width: 50px;
+    height: 15px;
+}
