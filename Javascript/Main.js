@@ -14,20 +14,22 @@ async function callAPI(Url) {
 
 async function StartConfig(){
 
-    UUID = Math.floor(Math.random() * 10000001);
+    let cookieUUID = getCookie("UUIDKey");
+    alert(cookieUUID);
 
-    setCookie("UUID",UUID,30);
+    if(cookieUUID == ""|| cookieUUID == null){
+        UUID = Math.floor(Math.random() * 10000001);
 
-    alert(UUID);
-
-    if(UUID == ""|| UUID == null){
-        let Response = await callAPI("Set/SetUser?Email=h@h.nl"); 
+        ResponseAPI = await callAPI("Set/SetUser?Email=h@h.nl&UUID="+UUID); 
     }else{
-        let Response = await callAPI("Get/GetUser?UUID="+UUID); 
+        ResponseAPI = await callAPI("Get/GetUserData?UUID="+cookieUUID); 
     }
-    alert(Response);
+    alert(ResponseAPI);
+
+    setCookie("UUIDKey",UUID,30);
 
     window.location.href = "Config1.html";
+    return ResponseAPI;
 }
 
 function setCookie(cname, cvalue, exdays) {
@@ -36,3 +38,19 @@ function setCookie(cname, cvalue, exdays) {
     let expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
