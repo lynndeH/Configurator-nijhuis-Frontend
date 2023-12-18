@@ -28,8 +28,11 @@ async function StartConfig(){
 
     setCookie("UUIDKey",UUID,30);
 
-    window.location.href = "Config1.html";
     return ResponseAPI;
+}
+
+async function MakeRoom(){
+
 }
 
 function setCookie(cname, cvalue, exdays) {
