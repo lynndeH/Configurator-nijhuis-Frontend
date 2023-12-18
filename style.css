@@ -174,12 +174,18 @@ section {
 
 .library-div {
   position: absolute;
-  top: 75px;
-  right: 0px;
+  top: 90px;
+  right: 20px;
   border: solid black 1px;
   width: 30vw;
   height: 40vh;
 
+}
+
+.library-image {
+  width: 60px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .library-topic-selection-box {
