@@ -8,22 +8,31 @@ async function callAPI(Url) {
 
     const output = JSON.stringify(myJson);
 
+    alert(output);
     return(output);
 }
 
-function StartConfig(){
-    let cookie = document.cookie;
+async function StartConfig(){
 
-    let UUID = cookie["UUID"];
+    UUID = Math.floor(Math.random() * 10000001);
+
+    setCookie("UUID",UUID,30);
 
     alert(UUID);
 
     if(UUID == ""|| UUID == null){
-        let response = callAPI("Set/SetUser?"); 
+        let Response = await callAPI("Set/SetUser?Email=h@h.nl"); 
     }else{
-        let response = callAPI("Get/GetUser?UUID="+UUID); 
+        let Response = await callAPI("Get/GetUser?UUID="+UUID); 
     }
-    alert(response);
+    alert(Response);
 
     window.location.href = "Config1.html";
+}
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
