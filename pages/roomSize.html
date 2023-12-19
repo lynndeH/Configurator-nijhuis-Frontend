@@ -13,6 +13,7 @@
             background-color: white;
             border: 1px solid black;
         }
+
     </style>
 </head>
 
@@ -34,26 +35,24 @@
     </nav>
 
     <br>
-        <h1 style="text-align: center; margin-bottom: 30px;">start met het opgeven van uw afmetingen</h1>
+    <h1 style="text-align: center; margin-bottom: 30px;">Start met het opgeven van uw afmetingen</h1>
 
     <div class="block-init"></div>
 
-    <!-- form voor het opgeven van de afmetingen -->
-    <div class="form" style="position: absolute; top: 50%; right: 10%; transform: translate(50%, -50%);">
-        <form method="post">
-            <label for="length">lengte:</label>
-            <input type="number" id="length" name="length" placeholder="lengte in cm" required>
+    <!-- form for specifying dimensions -->
+    <div class="form-container">
+        <form method="post" class="form">
+            <label for="length" class="form-label"><strong>Lengte:</strong></label>
+            <input type="number" id="length" name="length" placeholder="Lengte in cm" required>
             <br>
+            <label for="width" class="form-label"><strong>Breedte:</strong></label>
+            <input type="number" id="width" name="width" placeholder="Breedte in cm" required>
             <br>
-            <label for="width">breedte:</label>
-            <input type="number" id="width" name="width" placeholder="breedte in cm" required>
+            <label for="height" class="form-label"><strong>Hoogte:</strong></label>
+            <input type="number" id="height" name="height" placeholder="Hoogte in cm" required>
             <br>
-            <input type="submit" value="submit">
         </form>
     </div>
-
-
-
 
     <!-- knop naar volgende pagina -->
     <div>
@@ -61,7 +60,6 @@
             volgende stap
         </button>
     </div>
-
 
     <!-- scripts -->
     <script>
@@ -77,10 +75,74 @@
             // Update the square dimensions
             var square = document.getElementById("square");
             square.style.width = length + "px";
-            square.style.height = width + "px";
-
+            square.style.height = width + "px"; 
         }
     </script>
+
+  <!-- Footer -->
+<br><br><br<br><br><br><br><br><br><br><br><br><br><br>
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Tinker<span> creëer, inspireer, realiseer</span></h3>
+
+        <p class="footer-links">
+          <a href="../index.html" class="link-1">Home</a>
+          
+          <a href="../pages/about.html">About</a>
+
+          <a href="../pages/category.html">Category</a>
+          
+          <a href="../pages/contact.html">Contact</a>
+        </p>
+        <br><br><br>
+        <p class="footer-company-name">Company Tinker © 2023</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <p><a href="https://www.google.com/maps/dir//Laan+van+de+Mensenrechten+500,+7331+VZ+Apeldoorn/@52.2079028,5.8891664,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47c7b882276703df:0x2c7987fa5413b368!2m2!1d5.9715666!2d52.2079315?entry=ttu" target="_blank"><span>Apeldoorn, Nederland</span> 7300 AJ</a></p>
+        </div>
+        <br>
+
+        <div>
+          <p>+088 283 6887</p>
+        </div>
+
+        <br>
+
+        <div>
+          <p><a href="mailto:support@tinker.com">support@tinker.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          <a href="about.html">Wij geloven dat uw huis een weerspiegeling moet zijn van uw unieke stijl en behoeften, en daarom...</a>
+        </p>
+        <br>
+
+        <div class="footer-icon-php">
+            <a href="https://github.com/lynndeH/Configurator-nijhuis" target="_blank">
+                <img src="../files/php.png" alt="PHP Logo">
+            </a>
+        </div>
+    
+        <div class="footer-icon-html">
+            <a href="https://github.com/lynndeH/Configurator-nijhuis-Frontend/tree/main" target="_blank">
+                <img src="../files/html.png" alt="HTML Logo">
+            </a>
+        </div>
+
+      </div>
+
+    </footer>
+
 </body>
 
 </html>
