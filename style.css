@@ -550,12 +550,7 @@ textarea {
 }
 
 /* style voor de html en php knoppen */
-.footer-icon-php img {
-  width: 40px; 
-  height: 40px; 
-}
-
-.footer-icon-html img {
+.footer-icons img {
   width: 40px; 
   height: 40px; 
 }
