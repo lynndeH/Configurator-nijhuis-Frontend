@@ -15,7 +15,6 @@ async function callAPI(Url) {
 async function StartConfig(){
 
     let cookieUUID = getCookie("UUIDKey");
-    alert(cookieUUID);
 
     if(cookieUUID == ""|| cookieUUID == null){
         UUID = Math.floor(Math.random() * 10000001);
@@ -24,14 +23,28 @@ async function StartConfig(){
     }else{
         ResponseAPI = await callAPI("Get/GetUserData?UUID="+cookieUUID); 
     }
-    alert(ResponseAPI);
 
     setCookie("UUIDKey",UUID,30);
 
     return ResponseAPI;
 }
 
-async function MakeRoom(){
+async function MakeProject(ProjectType,Project_ID) {
+
+    let cookieUUID = getCookie("UUIDKey");
+
+    ResponseAPI = await callAPI("Set/SetProject?Room_Type="+ ProjectType+ "&UUID="+ cookieUUID+ "&Project_ID="+ Project_ID); 
+
+    return ResponseAPI;
+}
+
+async function MakeRoom(Room_ID, RoomHoogte, RoomBreedte){
+
+    RoomSize = 200;
+
+    ResponseAPI = await callAPI("Set/SetRoom?CoordX="+RoomBreedte+"&CoordY="+RoomSize+"&CoordZ="+RoomHoogte+"&Square=1&Room_ID="+Room_ID); 
+
+    return ResponseAPI;
 
 }
 
