@@ -31,15 +31,20 @@
         <!--de afmetingen -->
         <div class="block-init">
             <div class="flexbox-allig-left-for-block">
-                <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)"
-                    dropzone="copy" id="div1" src="" draggable="true" ondragstart="drag(event)">
+                <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="copy" id="div1"
+                    src="" draggable="true" ondragstart="drag(event)">
                 <p>Vloer</p>
             </div>
             <div class="flexbox-allig-left-for-block">
-                <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)"
-                    dropzone="copy" id="div2" src="" draggable="true" ondragstart="drag(event)">
+                <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="copy" id="div2"
+                    src="" draggable="true" ondragstart="drag(event)">
                 <p>Muur</p>
             </div>
+        </div>
+
+        <div class="room-to-fill" id="room-to-fill">
+            <!-- <img class="square-to-drag-in-room" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="copy" id="div1"
+                src="" draggable="true" ondragstart="drag(event)"> -->
         </div>
 
         <!--onze library met afbeeldingen-->
@@ -54,11 +59,40 @@
             <div class="library-image-box" dropzone="true" ondrop="dropRemoved(event)" ondragover="allowDrop(event)">
                 <img id="drag1" src="../PictureGallery/behang1.jpg" class="library-image" draggable="true"
                     ondragstart="drag(event)">
+                <img id="drag2" src="../PictureGallery/tile1.jpg" class="library-image" draggable="true"
+                    ondragstart="drag(event)">
             </div>
         </div>
     </div>
 
     <script>
+        
+
+        function makeEnoughSquares() {
+            const appContainer = document.getElementById('room-to-fill');
+            const blockLimit = 40;
+
+            const ourBlockList = [{}]
+            for(let i = 0; i < blockLimit; i++) {
+                var newBlock = document.createElement('img');
+                newBlock.classList.add('square-to-drag-in-room');
+                newBlock.setAttribute('ondrop', 'drop(event)');
+                newBlock.setAttribute('ondragover', 'allowDrop(event)');
+                newBlock.setAttribute('dropzone', 'copy');
+                newBlock.setAttribute('id', 'div' + i);
+                newBlock.setAttribute('src', '');
+                newBlock.setAttribute('draggable', 'true');
+                newBlock.setAttribute('ondragstart', 'drag(event)');
+                appContainer.appendChild(newBlock);
+            }
+        }
+
+        makeEnoughSquares();
+
+
+
+
+
         //een functie dat de afbeelding droppen accepteert
         function allowDrop(ev) {
             ev.preventDefault();
@@ -82,7 +116,7 @@
             var data = ev.dataTransfer.getData("text");
             var draggedImage = document.getElementById(data);
             draggedImage.src = "";
-            }
+        }
     </script>
 </body>
 

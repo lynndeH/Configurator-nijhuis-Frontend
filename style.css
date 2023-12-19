@@ -155,11 +155,33 @@ section {
   align-items: end;
 }
 
+.room-to-fill {
+  width: 40vw;
+  height: 40vh;
+  border: solid black 2px;
+  position: absolute;
+  top: 230px;
+  left: 150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0px 0px;
+  row-gap: 0px;
+  align-content: flex-start;
+}
+
 .square-to-drag {
   width: 60px;
   height: 60px;
   border: solid black 1px;
   margin-right: 10px;
+}
+
+.square-to-drag-in-room {
+  width: 10%;
+  height: 25%;
+  border: solid black 1px;
+  margin: 0px;
 }
 
 .flexbox-allig-left-for-block {
@@ -184,6 +206,7 @@ section {
 
 .library-image {
   width: 60px;
+  height: 60px;
   margin-top: 10px;
   margin-left: 10px;
 }
