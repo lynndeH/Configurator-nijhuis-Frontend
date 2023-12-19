@@ -2,7 +2,6 @@ async function callAPI(Url) {
     //http://localhost/leerjaar 3/Configurator_nijhuis/Configurator-nijhuis/
     let FullUrl = "https://api.tnkrr.nl/" + Url;
 
-    alert(FullUrl);
     const response = await fetch(FullUrl);
     const myJson = await response.json();
 
