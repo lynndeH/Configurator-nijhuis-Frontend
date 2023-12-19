@@ -14,7 +14,6 @@ async function callAPI(Url) {
 async function StartConfig(){
 
     let cookieUUID = getCookie("UUIDKey");
-    alert(cookieUUID);
 
     if(cookieUUID == ""|| cookieUUID == null){
         UUID = Math.floor(Math.random() * 10000001);
@@ -23,7 +22,6 @@ async function StartConfig(){
     }else{
         ResponseAPI = await callAPI("Get/GetUserData?UUID="+cookieUUID); 
     }
-    alert(ResponseAPI);
 
     setCookie("UUIDKey",UUID,30);
 

@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tinker</title>
+    <link rel="stylesheet" href="../style.css" />
 </head>
+
 <body>
-    
+    <nav>
+        <div class="navbar">
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/category.html">Category</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <a href="../files/logo.png">
+                    <img class="logo-img" src="../files/logo.png" alt="Tinker_Logo">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <div>
+        <h1 style="text-align: center; margin-bottom: 30px;">Ontwerp nu uw $name .</h1>
+        <!--de afmetingen -->
+        <div class="block-init">
+            <div class="flexbox-allig-left-for-block">
+                <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)"
+                    dropzone="copy" id="div1" src="" draggable="true" ondragstart="drag(event)">
+                <p>Vloer</p>
+            </div>
+            <div class="flexbox-allig-left-for-block">
+                <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)"
+                    dropzone="copy" id="div2" src="" draggable="true" ondragstart="drag(event)">
+                <p>Muur</p>
+            </div>
+        </div>
+
+        <!--onze library met afbeeldingen-->
+        <div class="library-div">
+            <div class="library-topic-selection-box">
+                <p class="topic-box">Badkamer</p>
+                <p class="topic-box">Keuken</p>
+                <p class="topic-box">Vloerbekleding</p>
+                <p class="topic-box">Wandbekleding</p>
+            </div>
+            <div class="library-image-box" dropzone="true" ondrop="dropRemoved(event)" ondragover="allowDrop(event)">
+                <img id="drag1" src="../PictureGallery/behang1.jpg" class="library-image" draggable="true"
+                    ondragstart="drag(event)">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //een functie dat de afbeelding droppen accepteert
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var draggedImage = document.getElementById(data);
+            var src = draggedImage.src;
+            var targetImage = ev.target;
+            targetImage.src = src;
+        }
+
+        function dropRemoved(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var draggedImage = document.getElementById(data);
+            draggedImage.src = "";
+            }
+    </script>
 </body>
+
 </html>
