@@ -2,7 +2,7 @@ async function callAPI(Url) {
     //http://localhost/leerjaar 3/Configurator_nijhuis/Configurator-nijhuis/
     let FullUrl = "https://api.tnkrr.nl/" + Url;
 
-
+    alert(FullUrl);
     const response = await fetch(FullUrl);
     const myJson = await response.json();
 
@@ -19,11 +19,16 @@ async function StartConfig(){
         UUID = Math.floor(Math.random() * 10000001);
 
         ResponseAPI = await callAPI("Set/SetUser?Email=h@h.nl&UUID="+UUID); 
+        setCookie("UUIDKey",UUID,30);
     }else{
         ResponseAPI = await callAPI("Get/GetUserData?UUID="+cookieUUID); 
     }
 
-    setCookie("UUIDKey",UUID,30);
+    if (ResponseAPI["Return"] == "Invalid_UUID") {
+        StartConfig();
+        return;
+    }
+
 
     return ResponseAPI;
 }
