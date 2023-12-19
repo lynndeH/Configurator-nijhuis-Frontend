@@ -21,6 +21,16 @@ nav {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+.total-price {
+  font-weight: 100;
+  list-style-type: none;
+  margin-left: 4px;
+}
+
+.list-item {
+  margin-left: 4px;
+}
+
 nav .navbar {
   display: flex;
   align-items: center;

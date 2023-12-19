@@ -25,70 +25,79 @@
         </div>
     </nav>
 
-        <h1 style="text-align: center; margin-bottom: 30px;">Ontwerp nu uw $name .</h1>
-        <!--de afmetingen -->
-        <div class="block-init">
-            <div class="flexbox-allig-left-for-block">
-                <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="copy" id="div1"
-                    src="../PictureGallery/white.png" draggable="true" ondragstart="drag(event)">
-                <p>Vloer</p>
-            </div>
-            <div class="flexbox-allig-left-for-block">
-                <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="copy" id="div2"
-                    src="../PictureGallery/white.png" draggable="true" ondragstart="drag(event)">
-                <p>Muur</p>
-            </div>
+    <h1 style="text-align: center; margin-bottom: 30px;">Ontwerp nu uw kamer .</h1>
+    <!--de afmetingen -->
+    <div class="block-init">
+        <div class="flexbox-allig-left-for-block">
+            <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="copy" id="div1"
+                src="../PictureGallery/white.png" draggable="true" ondragstart="drag(event)">
+            <p>Vloer</p>
         </div>
+        <div class="flexbox-allig-left-for-block">
+            <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="copy" id="div2"
+                src="../PictureGallery/white.png" draggable="true" ondragstart="drag(event)">
+            <p>Muur</p>
+        </div>
+    </div>
 
-        <div class="room-to-fill" id="room-to-fill">
-            <!-- <img class="square-to-drag-in-room" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="copy" id="div1"
+    <div class="room-to-fill" id="room-to-fill">
+        <!-- <img class="square-to-drag-in-room" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="copy" id="div1"
                 src="" draggable="true" ondragstart="drag(event)"> -->
-        </div>
+    </div>
 
-        <!--onze library met afbeeldingen-->
-        <div class="library-div">
-            <div class="library-topic-selection-box">
-                <p class="topic-box-selected">Alles</p>
-                <p class="topic-box">Badkamer</p>
-                <p class="topic-box">Keuken</p>
-                <p class="topic-box">Vloerbekleding</p>
-                <p class="topic-box">Wandbekleding</p>
-            </div>
-            <div class="library-image-box" dropzone="true" ondrop="dropRemoved(event)" ondragover="allowDrop(event)">
-                <img id="drag1" src="../PictureGallery/behang1.jpg" class="library-image" draggable="true"
-                    ondragstart="drag(event)">
-                <img id="drag2" src="../PictureGallery/tile1.jpg" class="library-image" draggable="true"
-                    ondragstart="drag(event)">
-                <img id="drag3" src="../PictureGallery/badkamer/bad_1.png" class="library-image" draggable="true"
-                    ondragstart="drag(event)">
-                <img id="drag4" src="../PictureGallery/badkamer/corner_counter.png" class="library-image" draggable="true"
-                    ondragstart="drag(event)">
-                <img id="drag5" src="../PictureGallery/badkamer/sink_1.png" class="library-image" draggable="true"
-                    ondragstart="drag(event)">
-                <img id="drag6" src="../PictureGallery/badkamer/sink_2.png" class="library-image" draggable="true"
-                    ondragstart="drag(event)">
-                <img id="drag7" src="../PictureGallery/badkamer/sink_oval_1.png" class="library-image" draggable="true"
-                    ondragstart="drag(event)">
-                <img id="drag8" src="../PictureGallery/badkamer/wc_2.png" class="library-image" draggable="true"
-                    ondragstart="drag(event)">
-            </div>
+    <!--onze library met afbeeldingen-->
+    <div class="library-div">
+        <div class="library-topic-selection-box">
+            <p class="topic-box-selected">Alles</p>
+            <p class="topic-box">Badkamer</p>
+            <p class="topic-box">Keuken</p>
+            <p class="topic-box">Vloerbekleding</p>
+            <p class="topic-box">Wandbekleding</p>
         </div>
+        <div class="library-image-box" dropzone="true" ondrop="dropRemoved(event)" ondragover="allowDrop(event)">
+            <img id="behang" src="../PictureGallery/behang1.jpg" class="library-image" draggable="true"
+                ondragstart="drag(event)">
+            <img id="tile" src="../PictureGallery/tile1.jpg" class="library-image" draggable="true"
+                ondragstart="drag(event)">
+            <img id="bad" src="../PictureGallery/badkamer/bad_1.png" class="library-image" draggable="true"
+                ondragstart="drag(event)">
+            <img id="counter" src="../PictureGallery/badkamer/corner_counter.png" class="library-image" draggable="true"
+                ondragstart="drag(event)">
+            <img id="sink" src="../PictureGallery/badkamer/sink_1.png" class="library-image" draggable="true"
+                ondragstart="drag(event)">
+            <img id="sink2" src="../PictureGallery/badkamer/sink_2.png" class="library-image" draggable="true"
+                ondragstart="drag(event)">
+            <img id="sink3" src="../PictureGallery/badkamer/sink_oval_1.png" class="library-image" draggable="true"
+                ondragstart="drag(event)">
+            <img id="wc" src="../PictureGallery/badkamer/wc_2.png" class="library-image" draggable="true"
+                ondragstart="drag(event)">
+        </div>
+    </div>
 
-        <div class="pricelist-box">
-            <ul>test 1</ul>
-        </div>
+    <div class="pricelist-box" id="pricelist-box">
+    </div>
 
     <div>
-        <button class="next-button" onclick="goToNextPage()">
-            volgende stap
+        <button class="next-button" onclick="DownloadPDF()">
+            download pdf
         </button>
     </div>
 
     <script>
         //make a few constants for list
         const pricelist = [
-            "item-design"
+            { id: "behang", price: 10 },
+            { id: "tile", price: 10 },
+            { id: "bad", price: 400 },
+            { id: "counter", price: 100 },
+            { id: "sink", price: 100 },
+            { id: "sink2", price: 150 },
+            { id: "sink3", price: 200 },
+            { id: "wc", price: 100 },
         ]
+
+        const CurrentListOfItems = []
+
 
         function makeEnoughSquares() {
             const appContainer = document.getElementById('room-to-fill');
@@ -111,17 +120,6 @@
 
         makeEnoughSquares()
 
-        function fillLibrary() {
-            const files = fs.readdirSync('../PictureGallery/badkamer');
-            filesLength =  files.length;
-            console.log(filesLength);
-
-            const container2 = document.querySelector('.library-image-box');
-
-        }
-
-        fillLibrary()
-
 
 
 
@@ -131,7 +129,7 @@
         }
 
         function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);  
+            ev.dataTransfer.setData("text", ev.target.id);
         }
 
         function drop(ev) {
@@ -141,6 +139,10 @@
             var src = draggedImage.src;
             var targetImage = ev.target;
             targetImage.src = src;
+            targetImage.id = data;
+
+            CurrentListOfItems.push({ id: data });
+            GetItemList();
         }
 
         function dropChild(ev) {
@@ -157,7 +159,45 @@
             var data = ev.dataTransfer.getData("text");
             var draggedImage = document.getElementById(data);
             draggedImage.src = "../PictureGallery/white.png";
+
+            // Find the item with the same id as the dragging image and remove it from the list
+            var itemId = data; 
+            console.log(itemId);
+            var index = CurrentListOfItems.findIndex(function (item) {
+                return item.id.toString() === itemId.toString();
+            });
+            if (index !== -1) {
+                CurrentListOfItems.splice(index, 1);
+            }
+            console.log(CurrentListOfItems);
+            GetItemList();
         }
+
+        function GetItemList() {
+            var priceList = document.getElementById("pricelist-box");
+            priceList.innerHTML = "";
+
+            var priceCalcculatedTotal = 0;
+            CurrentListOfItems.forEach(function(item) {
+                var listItem = document.createElement("li");
+                for (var i = 0; i < pricelist.length; i++) {
+                    if (pricelist[i].id === item.id) {
+                        listItem.textContent = item.id + " - " + pricelist[i].price + " euro";
+                        listItem.classList.add("list-item");
+                        priceList.appendChild(listItem);
+                        priceCalcculatedTotal += pricelist[i].price;
+                    }
+                }
+
+            })
+
+
+            var totalPrice = document.createElement("li");
+            totalPrice.textContent = "Totaalprijs: " + priceCalcculatedTotal + " euro";
+            totalPrice.classList.add("total-price");
+            priceList.appendChild(totalPrice);
+            }
+
     </script>
 </body>
 
