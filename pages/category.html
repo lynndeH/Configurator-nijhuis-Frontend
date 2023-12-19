@@ -65,18 +65,6 @@
             element.classList.toggle('clicked');
         }
 
-        function goToNextPage() {
-            //get the clicked element
-            var clickedElement = document.getElementsByClassName('clicked')[0];
-            if (clickedElement) {
-                var clickedElementId = clickedElement.id;
-                //here we can save the id of the clicked element in a variable
-                window.location.href = "../pages/roomSize.html";
-            }
-            else {
-                alert("Selecteer eerst een ruimte");
-            }
-        }
     </script>
 </body>
 
