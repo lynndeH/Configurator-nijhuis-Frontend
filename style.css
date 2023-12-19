@@ -143,6 +143,65 @@ section {
   right: 30px;
 }
 
+.block-init {
+  border: solid black 1px;
+  width: 60vw;
+  height: 60vh;
+  margin-top: 40px;
+  margin-left: 70px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: end;
+}
+
+.square-to-drag {
+  width: 60px;
+  height: 60px;
+  border: solid black 1px;
+  margin-right: 10px;
+}
+
+.flexbox-allig-left-for-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.library-div {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  border: solid black 1px;
+  width: 30vw;
+  height: 40vh;
+
+}
+
+.library-image {
+  width: 60px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.library-topic-selection-box {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.topic-box {
+  font-style: italic;
+  font-size: small;
+  border: solid black 1px;
+  padding: 5px;
+  cursor: pointer;
+}
+
 .ConfigStart {
   width: 50px;
   height: 15px;
@@ -223,4 +282,65 @@ button {
 
 button:hover {
   background-color: #1147acb7;
+}
+
+/* Contact us */
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* roomSize */
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="submit"] {
+  background-color: #034078;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #1282A2;
+}
+
+#square {
+  margin-top: 20px;
+  border: 1px solid #ccc;
 }

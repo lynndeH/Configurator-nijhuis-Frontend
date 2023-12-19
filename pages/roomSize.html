@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tinker</title>
     <link rel="stylesheet" href="../style.css" />
+    <style>
+        #square {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -23,22 +31,60 @@
         </div>
     </nav>
 
-
+    <br>
     <div>
         <h1 style="text-align: center; margin-bottom: 30px;">start met het opgeven van uw afmetingen</h1>
     </div>
 
-    <!-- knop naar volgende pagina -->
-    <div>
-        <button class="next-button" onclick="goToNextPage()">
-            volgende stap
-        </button>
+
+    <!-- form voor het opgeven van de afmetingen -->
+    <div class="form" style="position: absolute; top: 50%; right: 10%; transform: translate(50%, -50%);">
+        <form method="post">
+            <label for="length">lengte:</label>
+            <input type="number" id="length" name="length" placeholder="lengte in cm" required>
+            <br>
+            <br>
+            <label for="width">breedte:</label>
+            <input type="number" id="width" name="width" placeholder="breedte in cm" required>
+            <br>
+            <input type="submit" value="submit">
+        </form>
     </div>
+    <div id="square" style="width: 400px; height: 400px; margin: 0 auto;"></div>
+    </div>
+
+        
+
+        <!-- knop naar volgende pagina -->
+        <div>
+            <button class="next-button" onclick="goToNextPage()">
+                volgende stap
+            </button>
+        </div>
+        <div>
+            
+        </div>
+
+
+
+        <!-- scripts -->
+        <script>
+            function goToNextPage() {
+                window.location.href = "../pages/Config1.html";
+            }
+
+            function SaveForm() {
+                // Get the values from the form
+                var length = document.getElementById("length").value;
+                var width = document.getElementById("width").value;
     
-    <script>
-        goToNextPage = function() {
-            window.location.href = "Config1.html";
-        }
-    </script>
-</body>
-</html>
+                // Update the square dimensions
+                var square = document.getElementById("square");
+                square.style.width = length + "px";
+                square.style.height = width + "px";
+
+            }
+        </script>
+    </body>
+
+    </html>

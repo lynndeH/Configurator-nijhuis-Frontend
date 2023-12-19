@@ -1,6 +1,5 @@
 async function callAPI(Url) {
-
-    let FullUrl = "http://localhost/leerjaar 3/Configurator_nijhuis/Configurator-nijhuis/" + Url;
+    let FullUrl = "https://api.tnkrr.nl/" + Url;
     alert(FullUrl)
 
     const response = await fetch(FullUrl);
