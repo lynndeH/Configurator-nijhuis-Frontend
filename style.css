@@ -140,19 +140,21 @@ section {
   cursor: pointer;
   position: absolute;
   bottom: 30px;
-  right: 30px;
+  right: 20px;
+  margin: 0px !important;
 }
 
 .block-init {
   border: solid black 1px;
   width: 60vw;
   height: 60vh;
-  margin-top: 40px;
   margin-left: 70px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   align-items: end;
+  position: absolute;
+  bottom: 140px;
 }
 
 .room-to-fill {
@@ -180,7 +182,6 @@ section {
 .square-to-drag-in-room {
   width: 10%;
   height: 25%;
-  border: solid black 1px;
   margin: 0px;
 }
 
@@ -204,8 +205,17 @@ section {
 
 }
 
+.pricelist-box {
+  position: absolute;
+  border: solid black 1px;
+  bottom: 140px;
+  right: 20px;
+  width: 30vw;
+  height: 25vh;
+}
+
 .library-image {
-  width: 60px;
+  width: auto;
   height: 60px;
   margin-top: 10px;
   margin-left: 10px;

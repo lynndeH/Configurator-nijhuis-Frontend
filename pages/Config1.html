@@ -25,19 +25,17 @@
         </div>
     </nav>
 
-    <br>
-    <div>
         <h1 style="text-align: center; margin-bottom: 30px;">Ontwerp nu uw $name .</h1>
         <!--de afmetingen -->
         <div class="block-init">
             <div class="flexbox-allig-left-for-block">
                 <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="copy" id="div1"
-                    src="" draggable="true" ondragstart="drag(event)">
+                    src="../PictureGallery/white.png" draggable="true" ondragstart="drag(event)">
                 <p>Vloer</p>
             </div>
             <div class="flexbox-allig-left-for-block">
                 <img class="square-to-drag" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="copy" id="div2"
-                    src="" draggable="true" ondragstart="drag(event)">
+                    src="../PictureGallery/white.png" draggable="true" ondragstart="drag(event)">
                 <p>Muur</p>
             </div>
         </div>
@@ -61,34 +59,68 @@
                     ondragstart="drag(event)">
                 <img id="drag2" src="../PictureGallery/tile1.jpg" class="library-image" draggable="true"
                     ondragstart="drag(event)">
+                <img id="drag3" src="../PictureGallery/badkamer/bad_1.png" class="library-image" draggable="true"
+                    ondragstart="drag(event)">
+                <img id="drag4" src="../PictureGallery/badkamer/corner_counter.png" class="library-image" draggable="true"
+                    ondragstart="drag(event)">
+                <img id="drag5" src="../PictureGallery/badkamer/sink_1.png" class="library-image" draggable="true"
+                    ondragstart="drag(event)">
+                <img id="drag6" src="../PictureGallery/badkamer/sink_2.png" class="library-image" draggable="true"
+                    ondragstart="drag(event)">
+                <img id="drag7" src="../PictureGallery/badkamer/sink_oval_1.png" class="library-image" draggable="true"
+                    ondragstart="drag(event)">
+                <img id="drag8" src="../PictureGallery/badkamer/wc_2.png" class="library-image" draggable="true"
+                    ondragstart="drag(event)">
             </div>
         </div>
+
+        <div class="pricelist-box">
+            <ul>test 1</ul>
+        </div>
+
+    <div>
+        <button class="next-button" onclick="goToNextPage()">
+            volgende stap
+        </button>
     </div>
 
     <script>
-        
+        //make a few constants for list
+        const pricelist = [
+            "item-design"
+        ]
 
         function makeEnoughSquares() {
             const appContainer = document.getElementById('room-to-fill');
             const blockLimit = 40;
 
             const ourBlockList = [{}]
-            for(let i = 0; i < blockLimit; i++) {
+            for (let i = 0; i < blockLimit; i++) {
                 var newBlock = document.createElement('img');
                 newBlock.classList.add('square-to-drag-in-room');
                 newBlock.setAttribute('ondrop', 'drop(event)');
                 newBlock.setAttribute('ondragover', 'allowDrop(event)');
                 newBlock.setAttribute('dropzone', 'copy');
                 newBlock.setAttribute('id', 'div' + i);
-                newBlock.setAttribute('src', '');
+                newBlock.setAttribute('src', '../PictureGallery/white.png');
                 newBlock.setAttribute('draggable', 'true');
                 newBlock.setAttribute('ondragstart', 'drag(event)');
                 appContainer.appendChild(newBlock);
             }
         }
 
-        makeEnoughSquares();
+        makeEnoughSquares()
 
+        function fillLibrary() {
+            const files = fs.readdirSync('../PictureGallery/badkamer');
+            filesLength =  files.length;
+            console.log(filesLength);
+
+            const container2 = document.querySelector('.library-image-box');
+
+        }
+
+        fillLibrary()
 
 
 
@@ -99,7 +131,7 @@
         }
 
         function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
+            ev.dataTransfer.setData("text", ev.target.id);  
         }
 
         function drop(ev) {
@@ -111,11 +143,20 @@
             targetImage.src = src;
         }
 
+        function dropChild(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var draggedImage = document.getElementById(data);
+            var src = draggedImage.src;
+            var targetImage = ev.target;
+            targetImage.appendChild(draggedImage);
+        }
+
         function dropRemoved(ev) {
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
             var draggedImage = document.getElementById(data);
-            draggedImage.src = "";
+            draggedImage.src = "../PictureGallery/white.png";
         }
     </script>
 </body>
