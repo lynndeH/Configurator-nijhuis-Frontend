@@ -7,7 +7,6 @@ async function callAPI(Url) {
 
     const output = JSON.stringify(myJson);
 
-    alert(output);
     return(output);
 }
 
