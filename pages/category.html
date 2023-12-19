@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style.css" />
+
 </head>
 
+
 <body>
+    <script src="../Javascript/Main.js"></script>
     <!-- the navbar -->
     <nav>
         <div class="navbar">
@@ -54,6 +57,15 @@
 
     <!-- start of the javascript -->
     <script>
+        async function startPage() {
+            console.log("wij starten!")
+            await StartConfig()
+        }
+
+        startPage()
+
+
+        
         //this functions toggles the clicked class from the selector-box
         function toggleClicked(element) {
             //remove all other classes so only one can be clicked at a time
@@ -77,6 +89,8 @@
                 alert("Selecteer eerst een ruimte");
             }
         }
+
+
 
     </script>
 </body>
