@@ -59,13 +59,14 @@
     <script>
         async function startPage() {
             console.log("wij starten!")
-            await StartConfig()
+            userinfo = await StartConfig()
+            localStorage.setItem("userInfo", userinfo);
         }
 
         startPage()
 
 
-        
+
         //this functions toggles the clicked class from the selector-box
         function toggleClicked(element) {
             //remove all other classes so only one can be clicked at a time
