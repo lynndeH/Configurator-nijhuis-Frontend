@@ -32,16 +32,16 @@
     <div>
         <h1 style="text-align: center; margin-bottom: 30px;">Wat voor een ruimte wilt u verbouwen?</h1>
         <div class="flexbox-selector-img">
-        
-        <div class="selector-box" onclick="toggleClicked(this)">
-            <img src="../files/bathroom.jpg" alt="bathroom" class="selector-img" id="Badkamer">
-            <p style="text-align: center;">Badkamer</p>
+
+            <div class="selector-box" onclick="toggleClicked(this)">
+                <img src="../files/bathroom.jpg" alt="bathroom" class="selector-img" id="Badkamer">
+                <p style="text-align: center;">Badkamer</p>
+            </div>
+            <div class="selector-box" onclick="toggleClicked(this)">
+                <img src="../files/kitchen.jpg" alt="kitchen" class="selector-img" id="Keuken">
+                <p style="text-align: center;">Keuken</p>
+            </div>
         </div>
-        <div class="selector-box" onclick="toggleClicked(this)">
-            <img src="../files/kitchen.jpg" alt="kitchen" class="selector-img" id="Keuken">
-            <p style="text-align: center;">Keuken</p>
-        </div>
-    </div>
     </div>
 
     <!-- the button for the next page -->
@@ -63,6 +63,19 @@
             }
             //add the class to the clicked selector box
             element.classList.toggle('clicked');
+        }
+
+        function goToNextPage() {
+            //get the clicked element
+            var clickedElement = document.getElementsByClassName('clicked')[0];
+            if (clickedElement) {
+                var clickedElementId = clickedElement.id;
+                //here we can save the id of the clicked element in a variable
+                window.location.href = "../pages/roomSize.html";
+            }
+            else {
+                alert("Selecteer eerst een ruimte");
+            }
         }
 
     </script>
