@@ -316,3 +316,31 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+/* roomSize */
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="submit"] {
+  background-color: #034078;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #1282A2;
+}
+
+#square {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
