@@ -377,7 +377,8 @@ textarea {
   width: 300px;
   position: absolute;
   top: 160px;
-  right: 360px;
+  right: 0px;
+
 }
 
 .form-label {
